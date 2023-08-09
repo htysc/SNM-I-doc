@@ -5,16 +5,31 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: 'SNM-I Documentation',
+			editLink: {
+				baseUrl: 'https://github.com/csse-uoft/SNM-I-doc/edit/main',
+			},
 			social: {
-				github: 'https://github.com/withastro/starlight',
+				github: 'https://github.com/csse-uoft/SNM-I-doc',
 			},
 			sidebar: [
 				{
-					label: 'Guides',
+					label: 'Start here',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', link: '/guides/example/' },
+						{ label: 'Introduction', link: '/introduction' },
+						{ label: 'Project setup', link: '/project-setup' },
+						{ label: 'External dependencies', link: '/external-dependencies' },
+						{ label: 'Project structure', link: '/project-structure' },
+					],
+				},
+				{
+					label: 'Guides',
+					items: [
+						{ label: 'API', link: '/guides/api' },
+						{ label: 'GraphDB utils', link: '/guides/graphdb-utils' },
+						{ label: 'Data model', link: '/guides/data-model' },
+						{ label: 'Troubleshooting', link: '/guides/troubleshooting' },
 					],
 				},
 				{
