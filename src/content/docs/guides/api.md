@@ -41,3 +41,43 @@ Route | Method | Parameters | Action
 `user/resetPassword/checkCurrentPassword/:id` | POST | user id<br>password | Check if the password matches the current one
 `user/resetPassword/saveNewPassword/:id` | POST | user id<br>password<br>email (optional) | Save the password to the account with the email or the current logged in user if no email given
 `user/updatePrimaryEmail` | POST | jwt token (from the change primary email confirmation link) | Update primary email if the token is valid
+
+## `backend/routes/need.js`
+
+Route | Method | Parameters | Action
+---|---|---|---
+`need` | POST | Need form | Create a need
+`needs` | GET || Fetch all needs
+`need/:id` | DELETE || Delete the need with the specified ID
+`need/:id` | GET || Fetch the need with the specified ID
+`need/:id` | POST | Need form | Update the need with the specified ID using the information in the given form
+
+## `backend/routes/needSatisfier.js`
+
+Route | Method | Parameters | Action
+---|---|---|---
+`needSatisfier` | POST | Need satisfier form | Create a need satisfier
+`needSatisfiers` | GET || Fetch all need satisfiers
+`needSatisfier/:id` | DELETE || Delete the need satisfier with the specified ID
+`needSatisfier/:id` | GET || Fetch the need satisfier with the specified ID
+`needSatisfier/:id` | POST | Need satisfier form | Update the need satisfier with the specified ID using the information in the given form
+
+## `backend/routes/outcome.js`
+
+Route | Method | Parameters | Action
+---|---|---|---
+`outcome` | POST | Outcome form | Create an outcome
+`outcomes` | GET || Fetch all outcomes
+`outcome/:id` | DELETE || Delete the outcome with the specified ID
+`outcome/:id` | GET || Fetch the outcome with the specified ID
+`outcome/:id` | POST | Outcome form | Update the outcome with the specified ID using the information in the given form
+
+  ## `backend/routes/serviceProviders.js`
+
+Route | Method | Parameters | Action
+---|---|---|---
+`providers` | POST | Provider type<br>Service provider data | Create a service provider
+`providers` | GET || Fetch all service providers
+`providers/:id` | GET || Fetch the service provider with the specified ID
+`providers/:id` | DELETE || Delete the service provider with the specified ID
+`provider/:id` | POST | Provider type<br>Service provider data | Update the service provider with the specified ID using the information in the given form
